@@ -407,7 +407,7 @@ blockquote:before {
     .txt1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto 1fr;
         color: var(--light-2);
         padding: var(--m2);
     }
