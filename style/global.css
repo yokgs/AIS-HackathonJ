@@ -342,12 +342,24 @@ blockquote:before {
 .plan ul > li.no:before {
     content: "X";
 }
+)
+    .plan ul > li {
+        padding-left: var(--m3);
+        margin: var(--m3) 0;
+    }
 
-.plan ul > li {
-    padding-left: var(--m3);
-    margin: var(--m3) 0;
+
+#logobottom{
+    stroke:var(--dark);
+
 }
-
+.logo{
+    width: 70px;
+    height: 70px;
+    stroke: var(--light);
+    fill:transparent;
+    stroke-width: 5px;
+}
 @media screen and (max-width: 400px) {
     :root {
         --slide: calc(50vh - 35px);
