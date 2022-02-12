@@ -217,7 +217,7 @@ header > nav li.active > a {
     font-size: var(--f2);
     box-sizing: border-box;
     padding: var(--m1);
-    text-align: justify;
+    text-align: left;
     border-radius: var(--p2);
     border-top: var(--m2) solid var(--dark);
 }

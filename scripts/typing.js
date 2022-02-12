@@ -31,11 +31,3 @@ function refresh() {
 }
 
 setInterval(refresh, 100);
-document.querySelector('button.menu').addEventListener('click', e => {
-    e.preventDefault()
-    document.querySelector('body>header>nav').setAttribute('class', 'active');
-});
-document.querySelector('body>header>nav.active>.close').addEventListener('click', e => {
-    e.preventDefault()
-    document.querySelector('body>header>nav.active').setAttribute('class', '');
-});
