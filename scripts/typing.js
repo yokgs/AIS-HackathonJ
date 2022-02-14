@@ -2,20 +2,16 @@ const strings = [
     'We are leading a new generation to change the world',
     'Be the change you wish to see in the world'
 ];
-let j = 0, string = '', w = 15;
+let j = 0, string = '', w = 20;
 let i = 0, type = true, k = 0;
 
 function refresh() {
     if (type) {
-        i = (++i) % 2;
-        if (i) {
             string += strings[j][string.length];
-
-        }
         type = string.length < strings[j].length;
     } else {
         if (k == w - 1) {
-            string = string.substr(0, string.length - 1);
+            string = string.substr(0, Math.max(string.length - 2, 0));
             type = string.length == 0;
             if (type) {
                 j = (++j) % strings.length;

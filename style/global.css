@@ -23,9 +23,10 @@
     --f1: 1.5em;
     --f2: 1.25em;
     --f3: 1.125em;
-    --s1: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --s2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --s3: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --s0: inset 0 2px 4px 0 rgba(0, 0, 0, .05);
+    --s1: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+    --s2: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
+    --s3: 0 1px 2px 0 rgba(0, 0, 0, .05);
 
 }
 
@@ -148,12 +149,14 @@ header > nav li.active > a {
     background-image: url("../assets/p3.jpg");
 }
 
-.slide h1{
+.slide h1 {
     font-size: var(--f0);
 }
-.slide h2{
+
+.slide h2 {
     font-size: var(--f1);
 }
+
 .slide > svg.down {
     fill: var(--dark-2);
     position: absolute;
@@ -201,13 +204,6 @@ header > nav li.active > a {
     padding: var(--m2);
 }
 
-.txt2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr;
-    color: var(--light-2);
-    padding: var(--m2);
-}
 
 .text-content > blockquote {
     background: var(--light);
@@ -277,13 +273,40 @@ blockquote:before {
     padding-top: var(--m2);
 }
 
+.txt2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    color: var(--light-2);
+}
+
 .text-content > .header {
-
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
 }
 
-.text-content > .t {
+.text-content > .group {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    display: flex;
+    width: 100%;
+    padding: var(--m2);
+    justify-content: space-evenly;
+    background: var(--transparent);
 }
 
+.text-content > .group > div {
+    box-shadow: var(--s2);
+    border-radius: var(--p2);
+    border: 0px solid var(--mute);
+    width: 70px;
+    height: 70px;
+}
+.text-content > .group > div:hover{
+    box-shadow: var(--s0);
+}
 .plans {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -348,21 +371,24 @@ blockquote:before {
 .plan ul > li.no:before {
     content: "X";
 }
-    .plan ul > li {
-        padding-left: var(--m3);
-        margin: var(--m3) 0;
-    }
+
+.plan ul > li {
+    padding-left: var(--m3);
+    margin: var(--m3) 0;
+}
 
 
-#logobottom{
-    stroke:var(--dark);
+#logobottom {
+    stroke: var(--dark);
 
 }
-.logo{
+
+.logo {
     width: 70px;
     height: 70px;
-    fill:var(--light);
+    fill: var(--light);
 }
+
 @media screen and (max-width: 400px) {
     :root {
         --slide: calc(50vh - 35px);
@@ -475,10 +501,12 @@ blockquote:before {
     .slide {
         background-size: auto 100%;
     }
-    .slide h1{
+
+    .slide h1 {
         font-size: var(--f2);
     }
-    .slide h2{
+
+    .slide h2 {
         font-size: var(--f3);
     }
 }
