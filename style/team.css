@@ -1,7 +1,7 @@
 body > .team{
     width: 100vw;
     height: calc(100vw/121*81);
-    background-image: url("../assets/m2.jpg");
+    background-image: url("../assets/m2.webp");
     background-size: 100%;
     background-position: 50%;
     position: relative;
@@ -70,14 +70,16 @@ body > .team{
     height: 100%;
     width: 100%;
     position: absolute;
-    top:0;
-    left: 0;
-    display: none;
+    top:0;left: 0;
+    opacity: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-weight: 600;
     font-size: 3vw;
 }
+
 .team>.block.on.anass [data-p="anass"],
 .team>.block.on.yassine [data-p="yassine"],
 .team>.block.on.aya [data-p="aya"],
@@ -85,5 +87,10 @@ body > .team{
 .team>.block.on.mehdi [data-p="mehdi"],
 .team>.block.on.wahiba [data-p="wahiba"],
 .team>.block.on.ismail [data-p="ismail"]{
-    display: flex;
+    opacity: 1;
+    animation: fade 2.1s ease;
+}
+
+.team>.block.on span{
+    animation: grow 2.1s ease;
 }
