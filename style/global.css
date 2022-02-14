@@ -148,6 +148,12 @@ header > nav li.active > a {
     background-image: url("../assets/p3.jpg");
 }
 
+.slide h1{
+    font-size: var(--f0);
+}
+.slide h2{
+    font-size: var(--f1);
+}
 .slide > svg.down {
     fill: var(--dark-2);
     position: absolute;
@@ -342,7 +348,6 @@ blockquote:before {
 .plan ul > li.no:before {
     content: "X";
 }
-)
     .plan ul > li {
         padding-left: var(--m3);
         margin: var(--m3) 0;
@@ -356,9 +361,7 @@ blockquote:before {
 .logo{
     width: 70px;
     height: 70px;
-    stroke: var(--light);
-    fill:transparent;
-    stroke-width: 5px;
+    fill:var(--light);
 }
 @media screen and (max-width: 400px) {
     :root {
@@ -471,6 +474,12 @@ blockquote:before {
 
     .slide {
         background-size: auto 100%;
+    }
+    .slide h1{
+        font-size: var(--f2);
+    }
+    .slide h2{
+        font-size: var(--f3);
     }
 }
 
