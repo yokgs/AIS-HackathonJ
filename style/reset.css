@@ -37,3 +37,6 @@ body {
     overflow-x: hidden;
     scroll-snap-type: y proximity;
 }
+.rel{
+    position: relative;
+}

@@ -1,0 +1,76 @@
+.version{
+    height: auto;
+    margin: var(--m1);
+    box-shadow: var(--s2);
+    padding:var(--p3) var(--p1) ;
+    border: 2px solid var(--mute);
+    border-radius: var(--p2);
+}
+.version>header{
+    padding: var(--p1);
+    border-bottom: 1px solid var(--dark-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--f1);
+}
+.version>.icons{
+    margin: var(--m2);
+   display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.version>.icons>div{
+    height: auto;
+    min-width: 100px;
+    width: 20%;
+    padding: var(--p2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.version>.icons>div>a{
+   display: flex;
+    background: var(--transparent-2);
+}
+.version>.icons.diamond>div>a{
+    height: 70px;
+    width: 70px;
+}
+.version>.icons.gold>div>a{
+    height: 65px;
+    width: 65px;
+}
+.version>.icons.silver>div>a{
+    height: 60px;
+    width: 60px;
+}
+.version>.icons.support>div>a{
+    height: 50px;
+    width: 50px;
+}
+.version>.icons>header{
+    flex-grow: 5;
+    width: 100%;
+    font-size: var(--f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+j{display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns:  1fr 1fr 1fr 1fr 1fr;}
+
+/*.icons.gold{
+    background: gold;
+}
+.icons.silver{
+    background: silver;
+}
+.icons.diamond{
+    background: deepskyblue;
+}
+.icons.support{
+    background: midnightblue;
+}

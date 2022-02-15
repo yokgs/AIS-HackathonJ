@@ -88,9 +88,9 @@ body > .team{
 .team>.block.on.wahiba [data-p="wahiba"],
 .team>.block.on.ismail [data-p="ismail"]{
     opacity: 1;
-    animation: fade 2.1s ease;
+    animation: fade 2.2s ease;
 }
 
 .team>.block.on span{
-    animation: grow 2.1s ease;
+    animation: grow 2.2s ease;
 }
